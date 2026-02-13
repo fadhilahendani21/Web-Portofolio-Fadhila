@@ -1,0 +1,394 @@
+:root {
+    --pink-primary: #ff758c;
+    --pink-gradient: linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff; /* NETRAL */
+    color: #444;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--pink-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--pink-primary);
+}
+
+/* ================= SECTION ================= */
+section {
+    padding: 140px 10% 80px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #ff4d6d;
+}
+
+/* ================= WARNA PAGE SELANG SELING ================= */
+
+/* HOME */
+#home {
+    background: var(--pink-gradient);
+    color: white;
+}
+
+/* ABOUT */
+#about {
+    background: #ffffff;
+}
+
+/* PORTFOLIO */
+#portfolio {
+    background: linear-gradient(to bottom, #fff5f7, #ffeef2);
+}
+
+/* SKILLS */
+#skills {
+    background: #ffffff;
+}
+
+/* CONTACT */
+#contact {
+    background: linear-gradient(135deg, #fff0f3, #ffe3ed);
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: left;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.btn-main {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 14px 36px;
+    background: white;
+    color: var(--pink-primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* ================= ABOUT ================= */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 20px 20px 0px var(--pink-primary);
+}
+
+#about .text p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+    font-size: 1.15rem;
+}
+
+/* ================= PORTFOLIO ================= */
+/* GRID */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+/* CARD */
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE WRAPPER (BIAR RATA) */
+.portfolio-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f5f5f5;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE */
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* KHUSUS CERTIFICATE (BIAR GA KE POTONG) */
+.portfolio-img.contain img {
+    object-fit: contain;
+}
+
+/* TITLE */
+.portfolio-card h3 {
+    font-size: 1.3rem;
+    color: var(--pink-primary);
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.portfolio-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill-box {
+    margin-bottom: 30px;
+}
+
+.skill-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff4d6d;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 26px;
+    background: #f1f1f1;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 30px;
+    text-align: right;
+    padding-right: 12px;
+    line-height: 26px;
+    color: white;
+    font-weight: 600;
+    animation: loadSkill 2s ease forwards;
+}
+
+.skill-progress.ui { width: 90%; }
+.skill-progress.figma { width: 85%; }
+.skill-progress.wire { width: 75%; }
+
+@keyframes loadSkill {
+    from { width: 0; }
+}
+
+/* ================= CONTACT ================= */
+/* ================= CONTACT ================= */
+.contact-section {
+    background: linear-gradient(135deg, #f8cdda, #fbd3e9);
+    padding: 140px 10%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.8rem;
+    color: #e75480;
+    margin-bottom: 40px;
+}
+
+/* BOX */
+.contact-box {
+    max-width: 650px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.contact-desc {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* LIST */
+.contact-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+/* ITEM */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: 0.4s ease;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.contact-item i {
+    font-size: 1.6rem;
+}
+
+/* WARNA */
+.contact-item.whatsapp {
+    color: #25d366;
+}
+
+.contact-item.instagram {
+    color: #e1306c;
+}
+
+/* HOVER */
+.contact-item:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+/* FOOTER TEXT */
+.contact-footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
