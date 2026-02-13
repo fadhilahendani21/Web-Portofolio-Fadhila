@@ -12,7 +12,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: #ffffff; /* NETRAL */
     color: #444;
     overflow-x: hidden;
 }
@@ -60,7 +60,7 @@ nav ul li a:hover {
 /* ================= SECTION ================= */
 section {
     padding: 140px 10% 80px;
-    min-height: auto;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -70,26 +70,32 @@ h2 {
     color: #ff4d6d;
 }
 
-/* ================= WARNA PAGE ================= */
+/* ================= WARNA PAGE SELANG SELING ================= */
+
+/* HOME */
 #home {
     background: var(--pink-gradient);
     color: white;
 }
 
+/* ABOUT */
 #about {
     background: #ffffff;
 }
 
+/* PORTFOLIO */
 #portfolio {
     background: linear-gradient(to bottom, #fff5f7, #ffeef2);
 }
 
+/* SKILLS */
 #skills {
     background: #ffffff;
 }
 
+/* CONTACT */
 #contact {
-    background: linear-gradient(135deg, #f8cdda, #fbd3e9);
+    background: linear-gradient(135deg, #fff0f3, #ffe3ed);
 }
 
 /* ================= HERO ================= */
@@ -97,7 +103,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
     text-align: left;
 }
 
@@ -117,7 +123,6 @@ h2 {
 
 .hero-text p {
     margin-top: 10px;
-    font-size: 1.2rem;
     opacity: 0.9;
 }
 
@@ -173,17 +178,20 @@ h2 {
 
 #about .text p {
     text-align: justify;
+    text-justify: inter-word;
     line-height: 1.8;
     font-size: 1.15rem;
 }
 
 /* ================= PORTFOLIO ================= */
+/* GRID */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 50px;
 }
 
+/* CARD */
 .portfolio-card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 25px;
@@ -198,6 +206,7 @@ h2 {
     transform: translateY(-10px);
 }
 
+/* IMAGE WRAPPER (BIAR RATA) */
 .portfolio-img {
     width: 100%;
     height: 200px;
@@ -205,24 +214,31 @@ h2 {
     overflow: hidden;
     background: #f5f5f5;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* IMAGE */
 .portfolio-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* KHUSUS CERTIFICATE (BIAR GA KE POTONG) */
 .portfolio-img.contain img {
     object-fit: contain;
 }
 
+/* TITLE */
 .portfolio-card h3 {
     font-size: 1.3rem;
     color: var(--pink-primary);
     margin-bottom: 10px;
 }
 
+/* TEXT */
 .portfolio-card p {
     font-size: 1rem;
     line-height: 1.7;
@@ -246,6 +262,7 @@ h2 {
     font-weight: 600;
     color: #ff4d6d;
     margin-bottom: 8px;
+    display: block;
 }
 
 .skill-bar {
@@ -277,6 +294,20 @@ h2 {
 }
 
 /* ================= CONTACT ================= */
+/* ================= CONTACT ================= */
+.contact-section {
+    background: linear-gradient(135deg, #f8cdda, #fbd3e9);
+    padding: 140px 10%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.8rem;
+    color: #e75480;
+    margin-bottom: 40px;
+}
+
+/* BOX */
 .contact-box {
     max-width: 650px;
     margin: 0 auto;
@@ -291,15 +322,19 @@ h2 {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 35px;
+    line-height: 1.7;
 }
 
+/* LIST */
 .contact-list {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 35px;
     flex-wrap: wrap;
 }
 
+/* ITEM */
 .contact-item {
     display: flex;
     align-items: center;
@@ -309,15 +344,17 @@ h2 {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.05rem;
+    transition: 0.4s ease;
     background: white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.4s ease;
 }
 
+/* ICON */
 .contact-item i {
     font-size: 1.6rem;
 }
 
+/* WARNA */
 .contact-item.whatsapp {
     color: #25d366;
 }
@@ -326,79 +363,32 @@ h2 {
     color: #e1306c;
 }
 
+/* HOVER */
 .contact-item:hover {
     transform: translateY(-6px) scale(1.05);
 }
 
-/* ================= RESPONSIVE ================= */
+/* FOOTER TEXT */
+.contact-footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-    section {
-        padding: 110px 6% 60px;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .hero {
-        padding-top: 140px;
-        padding-bottom: 80px;
-        min-height: auto;
+    .hero-container {
+        flex-direction: column-reverse;
         text-align: center;
     }
 
-    .hero-container {
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 2.6rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
     .hero-image img {
-        width: 220px;
-        height: 220px;
+        width: 260px;
+        height: 260px;
     }
 
     .about-flex {
         flex-direction: column;
-        gap: 40px;
         text-align: center;
-    }
-
-    .profile-pic {
-        width: 240px;
-        height: 240px;
-        box-shadow: 12px 12px 0px var(--pink-primary);
-    }
-
-    #about .text p {
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .portfolio-card p {
-        text-align: left;
-        font-size: 0.95rem;
-    }
-
-    .contact-box {
-        padding: 35px 25px;
-    }
-
-    .contact-item {
-        width: 100%;
-        justify-content: center;
     }
 }
